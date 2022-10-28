@@ -1,6 +1,15 @@
 //1 array sum
-//function arraySum()
-
+function arraySum(arr)
+{
+    let sum=0
+    for(let i=0;i<arr.length;i++)
+    {
+        sum+=arr[i]
+    }
+    return sum
+}
+const arr=[4,5,1,3,6,9]
+console.log(arraySum(arr))
 //2 fibonacci numbers
 
 function fibonacci(a){
@@ -65,8 +74,21 @@ console.log(retType(undefined))
 console.log(retType('kshitij'))
 
 //7 longest word
-
-
+function longestWord(s)
+{
+    var ans
+    let size=0
+    const arr=s.split(" ");
+    for(let i=0;i<arr.length;i++)
+    {
+        let len=arr[i].length;
+        if(size<len)
+            ans=arr[i]
+    }
+    return ans
+}
+let s="Hello myself Kshitij"
+console.log(longestWord(s));
 
 //8 sort items in array
 var members=['Kailash','Punit','Sravan','Ayushi']
